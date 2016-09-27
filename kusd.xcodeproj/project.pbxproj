@@ -10,10 +10,10 @@
 		FAA3461D1D9B0608002D9F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3461C1D9B0608002D9F17 /* AppDelegate.swift */; };
 		FAA3461F1D9B0608002D9F17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3461E1D9B0608002D9F17 /* ViewController.swift */; };
 		FAA346221D9B0608002D9F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA346201D9B0608002D9F17 /* Main.storyboard */; };
-		FAA346241D9B0608002D9F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA346231D9B0608002D9F17 /* Assets.xcassets */; };
 		FAA346271D9B0608002D9F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA346251D9B0608002D9F17 /* LaunchScreen.storyboard */; };
 		FAA346321D9B0608002D9F17 /* kusdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA346311D9B0608002D9F17 /* kusdTests.swift */; };
 		FAA3463D1D9B0608002D9F17 /* kusdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3463C1D9B0608002D9F17 /* kusdUITests.swift */; };
+		FAAA516A1D9B36AC00606FFF /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAA51691D9B36AC00606FFF /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		FAA3461C1D9B0608002D9F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA3461E1D9B0608002D9F17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAA346211D9B0608002D9F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FAA346231D9B0608002D9F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA346261D9B0608002D9F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA346281D9B0608002D9F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA3462D1D9B0608002D9F17 /* kusdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kusdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +46,7 @@
 		FAA346381D9B0608002D9F17 /* kusdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kusdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3463C1D9B0608002D9F17 /* kusdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kusdUITests.swift; sourceTree = "<group>"; };
 		FAA3463E1D9B0608002D9F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAA51691D9B36AC00606FFF /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 				FAA3461C1D9B0608002D9F17 /* AppDelegate.swift */,
 				FAA3461E1D9B0608002D9F17 /* ViewController.swift */,
 				FAA346201D9B0608002D9F17 /* Main.storyboard */,
-				FAA346231D9B0608002D9F17 /* Assets.xcassets */,
+				FAAA51691D9B36AC00606FFF /* Media.xcassets */,
 				FAA346251D9B0608002D9F17 /* LaunchScreen.storyboard */,
 				FAA346281D9B0608002D9F17 /* Info.plist */,
 			);
@@ -233,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA346271D9B0608002D9F17 /* LaunchScreen.storyboard in Resources */,
-				FAA346241D9B0608002D9F17 /* Assets.xcassets in Resources */,
+				FAAA516A1D9B36AC00606FFF /* Media.xcassets in Resources */,
 				FAA346221D9B0608002D9F17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = kusd/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uwp.kusd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = kusd/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uwp.kusd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +505,7 @@
 				FAA346431D9B0608002D9F17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAA346441D9B0608002D9F17 /* Build configuration list for PBXNativeTarget "kusdTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +514,7 @@
 				FAA346461D9B0608002D9F17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAA346471D9B0608002D9F17 /* Build configuration list for PBXNativeTarget "kusdUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +523,7 @@
 				FAA346491D9B0608002D9F17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
