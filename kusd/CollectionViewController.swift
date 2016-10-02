@@ -30,7 +30,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     }
     // number of cells
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return iconName.count
     }
     
 
@@ -47,7 +47,17 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     // Does something when that cell is clicked
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected iteam at: \(indexPath.row)")
+        print("Selected item at: \(indexPath.row)")
+        let selectedItem = iconName[indexPath.row]
+        if selectedItem == "calendar"{
+            performSegue(withIdentifier: "ShowCalendar", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowCalendar" {
+            _ = segue.destination as! CalendarTable
+        }
     }
     
     

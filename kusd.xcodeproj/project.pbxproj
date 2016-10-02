@@ -16,7 +16,8 @@
 		FAAA516A1D9B36AC00606FFF /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAA51691D9B36AC00606FFF /* Media.xcassets */; };
 		FAAA516C1D9B5ADC00606FFF /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA516B1D9B5ADC00606FFF /* HomePageViewController.swift */; };
 		FAAA516E1D9B5BC600606FFF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA516D1D9B5BC600606FFF /* CollectionViewController.swift */; };
-		FDB1D4E91DA17F820009CFCC /* CalendarTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1D4E81DA17F820009CFCC /* CalendarTable.swift */; };
+		FDB1D4E91DA17F820009CFCC /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1D4E81DA17F820009CFCC /* EventTableViewController.swift */; };
+		FDB1D4F11DA19C3D0009CFCC /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1D4F01DA19C3D0009CFCC /* EventCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,8 @@
 		FAAA51691D9B36AC00606FFF /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		FAAA516B1D9B5ADC00606FFF /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		FAAA516D1D9B5BC600606FFF /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		FDB1D4E81DA17F820009CFCC /* CalendarTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTable.swift; sourceTree = "<group>"; };
+		FDB1D4E81DA17F820009CFCC /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		FDB1D4F01DA19C3D0009CFCC /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,7 @@
 			children = (
 				FAAA516D1D9B5BC600606FFF /* CollectionViewController.swift */,
 				FAAA516B1D9B5ADC00606FFF /* HomePageViewController.swift */,
-				FDB1D4E81DA17F820009CFCC /* CalendarTable.swift */,
+				FDB1D4E81DA17F820009CFCC /* EventTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4BAD3A1D9C0A1D00B24F28 /* CollectionViewCell.swift */,
+				FDB1D4F01DA19C3D0009CFCC /* EventCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -294,9 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAA516E1D9B5BC600606FFF /* CollectionViewController.swift in Sources */,
+				FDB1D4F11DA19C3D0009CFCC /* EventCell.swift in Sources */,
 				FAAA516C1D9B5ADC00606FFF /* HomePageViewController.swift in Sources */,
 				FA4BAD3B1D9C0A1D00B24F28 /* CollectionViewCell.swift in Sources */,
-				FDB1D4E91DA17F820009CFCC /* CalendarTable.swift in Sources */,
+				FDB1D4E91DA17F820009CFCC /* EventTableViewController.swift in Sources */,
 				FAA3461D1D9B0608002D9F17 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +374,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -419,6 +424,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
