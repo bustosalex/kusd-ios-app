@@ -56,7 +56,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowCalendar" {
-            _ = segue.destination as! CalendarTable
+            _ = segue.destination as! EventTableViewController
         }
     }
     

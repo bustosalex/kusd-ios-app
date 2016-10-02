@@ -39,7 +39,7 @@ class EventTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! CalendarCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! EventCell
         
         // Configure the cell...
         cell.headline.text = "asdf"
@@ -47,7 +47,11 @@ class EventTableViewController: UITableViewController {
         
         return cell
     }
- 
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected item at : \(indexPath.row)")
+    }
 
     /*
     // Override to support conditional editing of the table view.
