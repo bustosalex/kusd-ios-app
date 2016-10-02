@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uyG-eU-95s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zm8-rc-yNo">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -119,6 +119,16 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8M3-Sf-wOl">
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfH-Ok-gc3">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-s2-aAh">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQa-k9-k94">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="23" id="Qf8-Wl-n9v"/>
@@ -127,24 +137,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfH-Ok-gc3">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="XfH-Ok-gc3" firstAttribute="top" secondItem="MQa-k9-k94" secondAttribute="bottom" constant="16" id="Aph-cc-7cK"/>
+                                                <constraint firstItem="XfH-Ok-gc3" firstAttribute="top" secondItem="MQa-k9-k94" secondAttribute="bottom" constant="8" id="Aph-cc-7cK"/>
+                                                <constraint firstItem="xZv-s2-aAh" firstAttribute="leading" secondItem="8M3-Sf-wOl" secondAttribute="leading" constant="269" id="CgL-kz-PyL"/>
                                                 <constraint firstAttribute="trailing" secondItem="XfH-Ok-gc3" secondAttribute="trailing" id="GLn-HF-41m"/>
                                                 <constraint firstItem="XfH-Ok-gc3" firstAttribute="leading" secondItem="8M3-Sf-wOl" secondAttribute="leading" constant="8" id="HEX-ca-JF2"/>
+                                                <constraint firstAttribute="bottom" secondItem="xZv-s2-aAh" secondAttribute="bottom" id="Q45-L2-zlT"/>
                                                 <constraint firstItem="XfH-Ok-gc3" firstAttribute="centerX" secondItem="8M3-Sf-wOl" secondAttribute="centerX" constant="4" id="RaG-jU-vPX"/>
-                                                <constraint firstItem="MQa-k9-k94" firstAttribute="top" secondItem="8M3-Sf-wOl" secondAttribute="top" id="elL-M7-hRT"/>
+                                                <constraint firstItem="MQa-k9-k94" firstAttribute="top" secondItem="8M3-Sf-wOl" secondAttribute="top" constant="8" id="elL-M7-hRT"/>
+                                                <constraint firstItem="xZv-s2-aAh" firstAttribute="top" secondItem="XfH-Ok-gc3" secondAttribute="bottom" constant="2" id="jAh-JM-6gp"/>
                                                 <constraint firstItem="XfH-Ok-gc3" firstAttribute="centerX" secondItem="8M3-Sf-wOl" secondAttribute="centerX" constant="4" id="jPA-Oo-aOe"/>
+                                                <constraint firstAttribute="trailing" secondItem="xZv-s2-aAh" secondAttribute="trailing" constant="8" id="m22-0O-GDf"/>
                                                 <constraint firstItem="MQa-k9-k94" firstAttribute="leading" secondItem="XfH-Ok-gc3" secondAttribute="leading" id="m5G-hy-GJZ"/>
                                                 <constraint firstItem="MQa-k9-k94" firstAttribute="centerX" secondItem="8M3-Sf-wOl" secondAttribute="centerX" id="qgO-Gh-c8B"/>
-                                                <constraint firstItem="XfH-Ok-gc3" firstAttribute="top" secondItem="MQa-k9-k94" secondAttribute="bottom" constant="16" id="rBl-4x-G3K"/>
-                                                <constraint firstAttribute="bottom" secondItem="XfH-Ok-gc3" secondAttribute="bottom" constant="8" id="rzp-JN-mFL"/>
+                                                <constraint firstItem="XfH-Ok-gc3" firstAttribute="top" secondItem="MQa-k9-k94" secondAttribute="bottom" constant="8" id="rBl-4x-G3K"/>
+                                                <constraint firstAttribute="bottom" secondItem="XfH-Ok-gc3" secondAttribute="bottom" constant="23" id="rzp-JN-mFL"/>
                                                 <constraint firstItem="MQa-k9-k94" firstAttribute="trailing" secondItem="8M3-Sf-wOl" secondAttribute="trailingMargin" id="zK5-sU-J2c"/>
                                             </constraints>
                                         </view>
@@ -160,6 +169,7 @@
                                 <connections>
                                     <outlet property="cardView" destination="8M3-Sf-wOl" id="K7n-Z6-P0x"/>
                                     <outlet property="content" destination="XfH-Ok-gc3" id="yKV-pA-YIO"/>
+                                    <outlet property="publishDate" destination="xZv-s2-aAh" id="RcG-jl-FdL"/>
                                     <outlet property="title" destination="MQa-k9-k94" id="ufa-hQ-L5d"/>
                                 </connections>
                             </tableViewCell>
@@ -172,7 +182,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wig-ce-dP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2384.8000000000002" y="-527.58620689655174"/>
+            <point key="canvasLocation" x="2423" y="-548"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="si0-QE-JHJ">

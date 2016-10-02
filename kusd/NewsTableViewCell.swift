@@ -12,6 +12,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var publishDate: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

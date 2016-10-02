@@ -44,6 +44,7 @@ class NewsTableViewController: UITableViewController {
         // Configure the cell...
         cell.title.text = "Headline"
         cell.content.text = "Kenosha Unified School District (KUSD) has finalized the state-mandated Third Friday enrollment count. The initial count shows an enrollment of 21,929 students, a decrease of 332 students when compared to the 2015-2016 Third Friday count of 22,261."
+        cell.publishDate.text = "10/1/16"
         return cell
     }
  
