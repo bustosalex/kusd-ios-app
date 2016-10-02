@@ -58,7 +58,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showNews"{
             print("Trying to segue")
-            _ = segue.destination as! NewsTableViewController
+            var destination = segue.destination as! NewsTableViewController
             
         }
     }

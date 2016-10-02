@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zm8-rc-yNo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uyG-eU-95s">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,13 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="old_dude" translatesAutoresizingMaskIntoConstraints="NO" id="fZK-pT-a5a">
-                                <frame key="frameInset" minY="64" width="375" height="147"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-UB-SwQ">
-                                <frame key="frameInset" minX="16" minY="232" width="343" height="415"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="old_dude" translatesAutoresizingMaskIntoConstraints="NO" id="fZK-pT-a5a"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-UB-SwQ">
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="Zm8-rc-yNo" kind="embed" id="H7X-CW-8YV"/>
@@ -32,6 +28,16 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.93527644230769225" green="0.93527644230769225" blue="0.93527644230769225" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zYf-N5-EgR" firstAttribute="top" secondItem="fZK-pT-a5a" secondAttribute="bottom" constant="457" id="9JN-Bf-M8k"/>
+                            <constraint firstItem="iVM-UB-SwQ" firstAttribute="top" secondItem="fZK-pT-a5a" secondAttribute="bottom" constant="8" id="InX-JY-fli"/>
+                            <constraint firstItem="zYf-N5-EgR" firstAttribute="top" secondItem="iVM-UB-SwQ" secondAttribute="bottom" constant="20" id="QT3-5B-eEG"/>
+                            <constraint firstItem="fZK-pT-a5a" firstAttribute="top" secondItem="FuE-ck-hST" secondAttribute="bottom" id="Qw1-zl-Uwe"/>
+                            <constraint firstItem="fZK-pT-a5a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dNA-RV-t9M"/>
+                            <constraint firstAttribute="trailing" secondItem="iVM-UB-SwQ" secondAttribute="trailing" constant="16" id="fWL-BY-AxU"/>
+                            <constraint firstItem="iVM-UB-SwQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="hOZ-P4-TzN"/>
+                            <constraint firstAttribute="trailing" secondItem="fZK-pT-a5a" secondAttribute="trailing" id="r86-Sw-wBr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="KUSD" id="LOZ-P0-kad"/>
                     <connections>
@@ -40,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.80000000000007" y="-548.27586206896558"/>
+            <point key="canvasLocation" x="944.79999999999995" y="-548.27586206896558"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="h5m-gt-74q">
@@ -51,7 +57,7 @@
                         <viewControllerLayoutGuide type="bottom" id="SMJ-Fn-z7g"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YKz-yj-HWm">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="415"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="429"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3a2-Tt-6jd">
@@ -94,7 +100,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="aR7-6a-sIW" kind="show" identifier="showNews" id="KuX-vS-sVF"/>
+                        <segue destination="aR7-6a-sIW" kind="show" identifier="showNews" id="Dmw-kU-3BR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaI-FA-PBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -106,7 +112,7 @@
             <objects>
                 <tableViewController id="aR7-6a-sIW" customClass="NewsTableViewController" customModule="kusd" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="28" sectionFooterHeight="28" id="eMF-Cx-9ml">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="415"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="429"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -192,7 +198,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Sdm-SS-3eh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.69411764710000001" green="0.59607843140000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
