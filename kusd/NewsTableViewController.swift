@@ -9,7 +9,12 @@
 import UIKit
 
 class NewsTableViewController: UITableViewController {
+    
+    
+    let news: News = News(headline: "Test", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet odio ut lorem iaculis porttitor ut id nisl. Aenean accumsan, mi at sagittis ullamcorper, lorem lectus lacinia tellus, molestie porttitor ex lectus vitae augue. Maecenas sed ex ante. Curabitur lobortis mi arcu, eu aliquet odio aliquet vitae. In mauris lacus, vehicula a scelerisque quis, condimentum eget enim. Fusce ac nisl lorem. Pellentesque volutpat interdum odio, vitae pretium risus vulputate eget. Nam ultrices leo nec justo molestie, vel tempus mauris congue. Curabitur eget purus pharetra, condimentum magna a, suscipit ante.", date: "10/3/16")
+    
     let id = "Cell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,11 +45,11 @@ class NewsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: id, for: indexPath) as! NewsTableViewCell
-
-        // Configure the cell...
-        cell.title.text = "Headline"
-        cell.content.text = "Kenosha Unified School District (KUSD) has finalized the state-mandated Third Friday enrollment count. The initial count shows an enrollment of 21,929 students, a decrease of 332 students when compared to the 2015-2016 Third Friday count of 22,261."
-        cell.publishDate.text = "10/1/16"
+        
+        cell.headline.text = news.headline
+        cell.content.text = news.content
+        cell.date.text = news.date
+        
         return cell
     }
  
@@ -83,14 +88,22 @@ class NewsTableViewController: UITableViewController {
         return true
     }
     */
-
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        print("Selected item at \(row)")
+        
+        //performSegue(withIdentifier: "showNewsContent", sender: self)
+    }
     
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "showNewsContent"{
+            _ = segue.destination as? NewsPageViewController
+        }
+    }
  
 
 }
