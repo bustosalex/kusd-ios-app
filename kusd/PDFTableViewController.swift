@@ -1,14 +1,14 @@
 //
-//  CalendarTable.swift
+//  PDFTableViewController.swift
 //  kusd
 //
-//  Created by App Factory on 10/2/16.
+//  Created by App Factory on 10/3/16.
 //  Copyright © 2016 uwp. All rights reserved.
 //
 
 import UIKit
 
-class EventTableViewController: UITableViewController {
+class PDFTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,20 +37,12 @@ class EventTableViewController: UITableViewController {
         return 9
     }
 
-    var number = 0
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! EventCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! PDFCell
+
         // Configure the cell...
-        cell.headline.text = "EVENT"
-        cell.subtext.text = "Time and Place"
-        number += 1
-        cell.number.text = "\(number)"
+        cell.pdf.text = "PDF"
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You selected item at : \(indexPath.row)")
     }
 
     /*

@@ -50,13 +50,13 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         print("Selected item at: \(indexPath.row)")
         let selectedItem = iconName[indexPath.row]
         if selectedItem == "calendar"{
-            performSegue(withIdentifier: "ShowCalendar", sender: self)
+            performSegue(withIdentifier: "showCalendarScene", sender: self)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowCalendar" {
-            _ = segue.destination as! EventTableViewController
+        if segue.identifier == "showCalendarScene" {
+            _ = segue.destination as! UITabBarController
         }
     }
     
