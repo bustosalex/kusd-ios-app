@@ -8,15 +8,25 @@
 
 import UIKit
 
-class NewsTableViewController: UITableViewController {
+class NewsTableViewController: UITableViewController, XMLParserDelegate {
     
     
-    let news: News = News(headline: "Test", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet odio ut lorem iaculis porttitor ut id nisl. Aenean accumsan, mi at sagittis ullamcorper, lorem lectus lacinia tellus, molestie porttitor ex lectus vitae augue. Maecenas sed ex ante. Curabitur lobortis mi arcu, eu aliquet odio aliquet vitae. In mauris lacus, vehicula a scelerisque quis, condimentum eget enim. Fusce ac nisl lorem. Pellentesque volutpat interdum odio, vitae pretium risus vulputate eget. Nam ultrices leo nec justo molestie, vel tempus mauris congue. Curabitur eget purus pharetra, condimentum magna a, suscipit ante.", date: "10/3/16")
+   // let news: News = News(headline: "Test", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet odio ut lorem iaculis porttitor ut id nisl. Aenean accumsan, mi at sagittis ullamcorper, lorem lectus lacinia tellus, molestie porttitor ex lectus vitae augue. Maecenas sed ex ante. Curabitur lobortis mi arcu, eu aliquet odio aliquet vitae. In mauris lacus, vehicula a scelerisque quis, condimentum eget enim. Fusce ac nisl lorem. Pellentesque volutpat interdum odio, vitae pretium risus vulputate eget. Nam ultrices leo nec justo molestie, vel tempus mauris congue. Curabitur eget purus pharetra, condimentum magna a, suscipit ante.", date: "10/3/16")
     
     let id = "Cell"
     
+    var Items: [News] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if let url = URL(string: "http://www.kusd.edu/xml-news"){
+            if let parser = XMLParser(contentsOf: url){
+                parser.delegate = self
+                parser.parse()
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,6 +38,39 @@ class NewsTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    /** 
+    
+     Mark: - XMLParser Delegate Methods
+     
+    **/
+    
+    var newsTitle: String = ""
+    var newsDate: String = ""
+    var story: [String]?
+    var eName: String = ""
+    
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        
+        eName = elementName
+        
+        if elementName == "node"{
+            newsTitle = String()
+            newsDate = String()
+            story = []
+        }
+        
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        
+        if elementName == "node" {
+            
+        
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -46,12 +89,14 @@ class NewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: id, for: indexPath) as! NewsTableViewCell
         
-        cell.headline.text = news.headline
-        cell.content.text = news.content
-        cell.date.text = news.date
+        cell.headline.text = "asdf"
+        cell.content.text = "asdf"
+        cell.date.text = "asdf"
         
         return cell
     }
+    
+
  
 
     /*
@@ -94,7 +139,7 @@ class NewsTableViewController: UITableViewController {
         let row = indexPath.row
         print("Selected item at \(row)")
         
-        //performSegue(withIdentifier: "showNewsContent", sender: self)
+        performSegue(withIdentifier: "showNewsContent", sender: self)
     }
     
     // MARK: - Navigation

@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="1701.6000000000001" y="-548.27586206896558"/>
         </scene>
-        <!--News Table View Controller-->
+        <!--News-->
         <scene sceneID="3NF-4C-i3N">
             <objects>
-                <tableViewController id="aR7-6a-sIW" customClass="NewsTableViewController" customModule="kusd" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="News" id="aR7-6a-sIW" customClass="NewsTableViewController" customModule="kusd" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="28" sectionFooterHeight="28" id="eMF-Cx-9ml">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="429"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +220,7 @@
                                     <constraint firstItem="QKR-W7-cE8" firstAttribute="leading" secondItem="b8g-3v-qZD" secondAttribute="leading" id="Dmw-FS-vCm"/>
                                     <constraint firstAttribute="bottom" secondItem="QKR-W7-cE8" secondAttribute="bottom" constant="23" id="GDx-5o-sX8"/>
                                     <constraint firstItem="QKR-W7-cE8" firstAttribute="leading" secondItem="hqw-AV-dDH" secondAttribute="leading" id="Hct-mo-Gor"/>
-                                    <constraint firstAttribute="trailing" secondItem="hqw-AV-dDH" secondAttribute="trailing" constant="55" id="QzV-Wi-pIm"/>
+                                    <constraint firstAttribute="trailing" secondItem="hqw-AV-dDH" secondAttribute="trailing" constant="8" id="QzV-Wi-pIm"/>
                                     <constraint firstAttribute="trailing" secondItem="QKR-W7-cE8" secondAttribute="trailing" constant="25" id="Uqi-E0-1xu"/>
                                     <constraint firstItem="b8g-3v-qZD" firstAttribute="top" secondItem="hqw-AV-dDH" secondAttribute="bottom" constant="8" symbolic="YES" id="i47-q8-unX"/>
                                 </constraints>
@@ -230,12 +230,10 @@
                         <constraints>
                             <constraint firstItem="A7R-4B-fLg" firstAttribute="top" secondItem="AEN-sP-Y3y" secondAttribute="bottom" constant="20" id="0Br-8Z-FD5"/>
                             <constraint firstItem="AEN-sP-Y3y" firstAttribute="centerY" secondItem="YTJ-MS-qeP" secondAttribute="centerY" id="0U3-2m-2eA"/>
+                            <constraint firstItem="AEN-sP-Y3y" firstAttribute="top" secondItem="BFk-l0-db7" secondAttribute="bottom" constant="20" id="GUI-Zm-9Xs"/>
                             <constraint firstAttribute="trailing" secondItem="AEN-sP-Y3y" secondAttribute="trailing" constant="16" id="IlX-XI-NRW"/>
-                            <constraint firstItem="AEN-sP-Y3y" firstAttribute="top" secondItem="YTJ-MS-qeP" secondAttribute="topMargin" constant="20" id="S8c-PU-6Vl"/>
-                            <constraint firstItem="AEN-sP-Y3y" firstAttribute="top" secondItem="YTJ-MS-qeP" secondAttribute="top" constant="20" id="TWN-hz-jql"/>
                             <constraint firstItem="AEN-sP-Y3y" firstAttribute="leading" secondItem="YTJ-MS-qeP" secondAttribute="leading" constant="16" id="XcE-S8-B0d"/>
                             <constraint firstItem="AEN-sP-Y3y" firstAttribute="centerX" secondItem="YTJ-MS-qeP" secondAttribute="centerX" id="lQx-ay-nKX"/>
-                            <constraint firstItem="AEN-sP-Y3y" firstAttribute="top" secondItem="YTJ-MS-qeP" secondAttribute="top" constant="20" id="ocd-Za-CKO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -243,12 +241,11 @@
                         <outlet property="content" destination="QKR-W7-cE8" id="jqh-Gj-et5"/>
                         <outlet property="date" destination="b8g-3v-qZD" id="icU-8r-K08"/>
                         <outlet property="headline" destination="hqw-AV-dDH" id="K8U-jq-OVi"/>
-                        <outlet property="title" destination="hqw-AV-dDH" id="5vu-8k-B1s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhS-Xt-6Zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3336.8000000000002" y="-548.27586206896558"/>
+            <point key="canvasLocation" x="3189.5999999999999" y="-533.88305847076469"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="si0-QE-JHJ">

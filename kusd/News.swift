@@ -11,14 +11,8 @@ import Foundation
 
 struct News {
     
-    let headline: String
-    let content: String
+    let title: String
     let date: String
-    
-    init(headline: String, content: String, date: String) {
-        self.headline = headline
-        self.content = content
-        self.date = date
-    }
+    let story: Story
     
 }
