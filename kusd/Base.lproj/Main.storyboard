@@ -161,6 +161,13 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="phoneNumber" destination="JuH-HZ-eCT" id="74Y-CQ-Zwi"/>
+                                    <outlet property="schooName" destination="dhe-QW-QnB" id="lQt-kc-VGu"/>
+                                    <outlet property="schoolAddress" destination="VUU-Jj-e9o" id="H1V-Hb-cgc"/>
+                                    <outlet property="schoolImage" destination="x1Z-eF-JoV" id="J5c-Q5-w8V"/>
+                                    <outlet property="townAndZip" destination="sHE-oe-YGs" id="Nq1-z2-eyp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -178,7 +185,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uyG-eU-95s" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Sdm-SS-3eh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sdm-SS-3eh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.69411764710000001" green="0.59607843140000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
