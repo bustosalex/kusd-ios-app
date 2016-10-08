@@ -9,10 +9,12 @@
 import UIKit
 
 class PDFTableViewController: UITableViewController {
+    
+    var pdfs = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        pdfs = ["2016-2017 SCHOOL CALENDAR","2016-2017 TEST CALENDAR","2017-2018 SCHOOL CALENDAR"]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -41,10 +43,18 @@ class PDFTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! PDFCell
 
         // Configure the cell...
-        cell.pdf.text = "PDF"
+        cell.pdf.text = pdfs[indexPath.row]
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -79,7 +89,7 @@ class PDFTableViewController: UITableViewController {
         return true
     }
     */
-
+    
     /*
     // MARK: - Navigation
 

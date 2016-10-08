@@ -9,10 +9,12 @@
 import UIKit
 
 class EventTableViewController: UITableViewController {
+    
+    var numbers = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        numbers = ["1","2","3","4","5","6","7","8","9","10"]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,18 +36,16 @@ class EventTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 30
+        return 10
     }
 
-    var number = 0
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! EventCell
         
         // Configure the cell...
         cell.headline.text = "EVENT"
         cell.subtext.text = "Time and Place"
-        number += 1
-        cell.number.text = "\(number)"
+        cell.number.text = numbers[indexPath.row]
         return cell
     }
     
