@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Calendar Tab Bar Controller-->
         <scene sceneID="kas-Bj-w9W">
             <objects>
-                <tabBarController storyboardIdentifier="CalendarTabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bls-r1-TVW" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CalendarTabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bls-r1-TVW" customClass="CalendarTabBarController" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
                     <fixedSimulatedSizeMetrics key="simulatedDestinationMetrics">
                         <size key="portraitSize" width="343" height="415"/>
@@ -23,7 +23,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="jXz-Zl-6sv" kind="relationship" relationship="viewControllers" id="XNM-pS-wpq"/>
-                        <segue destination="rG5-f9-6Na" kind="relationship" relationship="viewControllers" id="LFj-5X-GGl"/>
+                        <segue destination="vvQ-MJ-j5H" kind="relationship" relationship="viewControllers" id="fBH-Xv-GkO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHX-aq-1kq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -55,8 +55,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtext" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vg-pl-sg7">
-                                                    <frame key="frameInset" minX="119" minY="40" width="200" height="32"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtext" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vg-pl-sg7">
+                                                    <frame key="frameInset" minX="119" minY="40" width="200" height="49"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
                                                     <nil key="textColor"/>
@@ -65,7 +65,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UPK-dd-hMM">
                                                     <frame key="frameInset" minX="8" minY="8" width="81" height="81"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.24915167297979801" green="0.0" blue="0.084552125343556814" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.24705882352941178" green="0.0" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="September" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6S-Np-ZNJ" userLabel="Month">
                                                     <frame key="frameInset" minX="8" minY="8" width="81" height="33"/>
@@ -98,7 +98,6 @@
                                     <outlet property="headline" destination="0lF-Ix-IbM" id="dUB-yx-pgj"/>
                                     <outlet property="number" destination="Tye-VX-Euh" id="wbU-Ac-q39"/>
                                     <outlet property="subtext" destination="2Vg-pl-sg7" id="DiH-kb-PPR"/>
-                                    <segue destination="txF-J8-iBl" kind="show" id="UsD-1D-3Wu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -111,71 +110,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcY-VG-QMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3372" y="-548"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="3jg-Pf-7CS">
-            <objects>
-                <viewController id="txF-J8-iBl" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Req-r0-Suz"/>
-                        <viewControllerLayoutGuide type="bottom" id="2eV-PA-UgJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hLQ-OK-vjW">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="415"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FFb-Cn-ZGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4206" y="-548"/>
-        </scene>
-        <!--PDFs-->
-        <scene sceneID="mhE-BM-kKR">
-            <objects>
-                <tableViewController id="rG5-f9-6Na" customClass="PDFTableViewController" customModule="kusd" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="7L7-JP-Odt">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="415"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="80" id="CqZ-LL-pHT" customClass="PDFCell" customModule="kusd" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="343" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CqZ-LL-pHT" id="EYr-fi-102">
-                                    <frame key="frameInset" width="343" height="79"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PDF" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tda-5F-I2G">
-                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="tda-5F-I2G" firstAttribute="leading" secondItem="EYr-fi-102" secondAttribute="leading" constant="8" id="S5H-WG-iZU"/>
-                                        <constraint firstItem="tda-5F-I2G" firstAttribute="top" secondItem="EYr-fi-102" secondAttribute="top" constant="-11" id="nxK-ah-7js"/>
-                                        <constraint firstAttribute="trailing" secondItem="tda-5F-I2G" secondAttribute="trailing" constant="8" id="vUg-hI-E0g"/>
-                                        <constraint firstAttribute="bottom" secondItem="tda-5F-I2G" secondAttribute="bottom" constant="8" id="wwx-2c-80S"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="pdf" destination="tda-5F-I2G" id="olN-r3-mn0"/>
-                                    <segue destination="Eiy-tB-WnY" kind="show" id="wXB-QT-I8A"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="rG5-f9-6Na" id="BV2-Ze-Ga3"/>
-                            <outlet property="delegate" destination="rG5-f9-6Na" id="KVj-kz-LaW"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="PDFs" image="ic_insert_drive_file" id="h05-oD-gse"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zQT-Mk-NP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2532" y="-23"/>
+            <point key="canvasLocation" x="3372" y="-548.27586206896558"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TaT-xZ-CoZ">
@@ -211,9 +146,80 @@
             </objects>
             <point key="canvasLocation" x="3372" y="-24.7376311844078"/>
         </scene>
+        <!--PDFs-->
+        <scene sceneID="mPy-pN-CLa">
+            <objects>
+                <viewController id="vvQ-MJ-j5H" customClass="PDFButtonViewController" customModule="kusd" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Exe-aa-ICb"/>
+                        <viewControllerLayoutGuide type="bottom" id="PgF-z0-dWp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ck-Fm-xVX">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="415"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rz9-7q-aC4">
+                                <color key="backgroundColor" red="0.2470588235" green="0.0" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="This Year Test Calendar"/>
+                                <connections>
+                                    <segue destination="Eiy-tB-WnY" kind="show" identifier="TYTC" id="qdD-Fv-Gy8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0B-q0-0SB">
+                                <color key="backgroundColor" red="0.2470588235" green="0.0" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next Year School Calendar"/>
+                                <connections>
+                                    <segue destination="Eiy-tB-WnY" kind="show" identifier="NYSC" id="ehS-Ik-4j7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJM-tb-BKD">
+                                <color key="backgroundColor" red="0.2470588235" green="0.0" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="This Year School Calendar"/>
+                                <connections>
+                                    <segue destination="Eiy-tB-WnY" kind="show" identifier="TYSC" id="C7L-0C-tzO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WJM-tb-BKD" firstAttribute="trailing" secondItem="8Ck-Fm-xVX" secondAttribute="trailingMargin" id="De9-su-Udb"/>
+                            <constraint firstItem="rz9-7q-aC4" firstAttribute="leading" secondItem="8Ck-Fm-xVX" secondAttribute="leadingMargin" id="JXk-AF-sCP"/>
+                            <constraint firstItem="WJM-tb-BKD" firstAttribute="top" secondItem="Exe-aa-ICb" secondAttribute="bottom" constant="50" id="OxF-2H-S1x"/>
+                            <constraint firstItem="WJM-tb-BKD" firstAttribute="leading" secondItem="8Ck-Fm-xVX" secondAttribute="leadingMargin" id="P1k-mo-tOD"/>
+                            <constraint firstItem="h0B-q0-0SB" firstAttribute="height" secondItem="WJM-tb-BKD" secondAttribute="height" id="Rjc-7a-X9x"/>
+                            <constraint firstItem="h0B-q0-0SB" firstAttribute="leading" secondItem="8Ck-Fm-xVX" secondAttribute="leadingMargin" id="Rk1-lv-uuJ"/>
+                            <constraint firstItem="rz9-7q-aC4" firstAttribute="trailing" secondItem="8Ck-Fm-xVX" secondAttribute="trailingMargin" id="Rmd-lB-z8P"/>
+                            <constraint firstItem="h0B-q0-0SB" firstAttribute="width" secondItem="WJM-tb-BKD" secondAttribute="width" id="Uow-p5-87L"/>
+                            <constraint firstItem="h0B-q0-0SB" firstAttribute="top" secondItem="rz9-7q-aC4" secondAttribute="bottom" constant="50" id="Xbp-oK-JfA"/>
+                            <constraint firstItem="rz9-7q-aC4" firstAttribute="height" secondItem="WJM-tb-BKD" secondAttribute="height" id="eTW-EZ-YIm"/>
+                            <constraint firstItem="rz9-7q-aC4" firstAttribute="top" secondItem="WJM-tb-BKD" secondAttribute="bottom" constant="50" id="mVW-Xd-RQh"/>
+                            <constraint firstItem="rz9-7q-aC4" firstAttribute="width" secondItem="WJM-tb-BKD" secondAttribute="width" id="xqj-bs-BeM"/>
+                            <constraint firstItem="h0B-q0-0SB" firstAttribute="trailing" secondItem="8Ck-Fm-xVX" secondAttribute="trailingMargin" id="yBm-Dz-5Hn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="PDFs" image="ic_insert_drive_file" id="LOn-BM-SDQ"/>
+                    <connections>
+                        <outlet property="NYSCButton" destination="h0B-q0-0SB" id="7lw-sw-H2w"/>
+                        <outlet property="TYSCButton" destination="WJM-tb-BKD" id="5xB-dM-ZWg"/>
+                        <outlet property="TYTCButton" destination="rz9-7q-aC4" id="nRg-gW-erE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8VR-PF-enX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2532" y="-25.637181409295355"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_insert_drive_file" width="24" height="24"/>
         <image name="ic_view_list" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qdD-Fv-Gy8"/>
+    </inferredMetricsTieBreakers>
 </document>

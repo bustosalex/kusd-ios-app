@@ -8,16 +8,28 @@
 
 import UIKit
 
-class PDFViewController: UIViewController,UIWebViewDelegate {
+class PDFViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     
+    var buttonName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView.delegate = self
-        if let url = URL(string: "http://www.kusd.edu/sites/default/files/calendar-16-17.pdf") {
-            let request = URLRequest(url: url)
-            webView.loadRequest(request)
+        if buttonName == "TYSC" {
+            let myURL = URL(string: "http://www.kusd.edu/sites/default/files/calendar-16-17.pdf")
+            let myURLRequest = URLRequest(url: myURL!)
+            webView.loadRequest(myURLRequest)
+        }
+        else if buttonName == "TYTC" {
+            let myURL = URL(string: "http://www.kusd.edu/sites/default/files/test-calendar_0.pdf")
+            let myURLRequest = URLRequest(url: myURL!)
+            webView.loadRequest(myURLRequest)
+        }
+        else if buttonName == "NYSC"{
+            let myURL = URL(string: "http://www.kusd.edu/sites/default/files/calendar-17-18.pdf")
+            let myURLRequest = URLRequest(url: myURL!)
+            webView.loadRequest(myURLRequest)
         }
         // Do any additional setup after loading the view.
     }
@@ -26,7 +38,6 @@ class PDFViewController: UIViewController,UIWebViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

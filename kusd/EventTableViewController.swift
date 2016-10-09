@@ -44,7 +44,7 @@ class EventTableViewController: UITableViewController {
         
         // Configure the cell...
         cell.headline.text = "EVENT"
-        cell.subtext.text = "Time and Place"
+        cell.subtext.text = "Short description"
         cell.number.text = numbers[indexPath.row]
         return cell
     }
