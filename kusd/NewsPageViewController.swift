@@ -17,21 +17,28 @@ class NewsPageViewController: UIViewController {
     var new: News!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.content.scrollRangeToVisible(NSMakeRange(0, 0))
 
         // Do any additional setup after loading the view.
     }
     
     // set everything
     override func viewWillAppear(_ animated: Bool) {
-        headline.text = "asdf"
-        content.text = "asdf"
-        date.text = "asdf"
+        headline.text = new.title
+        content.text = new.story?.stories[0]
+        date.text = new.date
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        content.setContentOffset(CGPoint.zero, animated: false)
+    }
+
     
 
     /*

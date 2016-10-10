@@ -9,5 +9,5 @@
 import Foundation
 
 struct Story {
-    let stories: [String]?
+    let stories: [String]
 }

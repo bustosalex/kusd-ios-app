@@ -9,10 +9,16 @@
 import Foundation
 
 
-struct News {
+class News{
     
-    let title: String
-    let date: String
-    let story: Story
+    var title = String()
+    var date = String()
+    var story: Story!
+    
+    init(title: String, date: String, story: Story){
+        self.title = title
+        self.date = date
+        self.story = story
+    }
     
 }

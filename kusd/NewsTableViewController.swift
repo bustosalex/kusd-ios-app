@@ -10,23 +10,19 @@ import UIKit
 
 class NewsTableViewController: UITableViewController, XMLParserDelegate {
     
+    let fuck = Story(stories: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet odio ut lorem iaculis porttitor ut id nisl. Aenean accumsan, mi at sagittis ullamcorper, lorem lectus lacinia tellus, molestie porttitor ex lectus vitae augue. Maecenas sed ex ante. Curabitur lobortis mi arcu, eu aliquet odio aliquet vitae. In mauris lacus, vehicula a scelerisque quis, condimentum eget enim. Fusce ac nisl lorem. Pellentesque volutpat interdum odio, vitae pretium risus vulputate eget. Nam ultrices leo nec justo molestie, vel tempus mauris congue. Curabitur eget purus pharetra, condimentum magna a, suscipit ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet odio ut lorem iaculis porttitor ut id nisl. Aenean accumsan, mi at sagittis ullamcorper, lorem lectus lacinia tellus, molestie porttitor ex lectus vitae augue. Maecenas sed ex ante. Curabitur lobortis mi arcu, eu aliquet odio aliquet vitae. In mauris lacus, vehicula a scelerisque quis, condimentum eget enim. Fusce ac nisl lorem. Pellentesque volutpat interdum odio, vitae pretium risus vulputate eget. Nam ultrices leo nec justo molestie, vel tempus mauris congue. Curabitur eget purus pharetra, condimentum magna a, suscipit ante."])
     
-   // let news: News = News(headline: "Test", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet odio ut lorem iaculis porttitor ut id nisl. Aenean accumsan, mi at sagittis ullamcorper, lorem lectus lacinia tellus, molestie porttitor ex lectus vitae augue. Maecenas sed ex ante. Curabitur lobortis mi arcu, eu aliquet odio aliquet vitae. In mauris lacus, vehicula a scelerisque quis, condimentum eget enim. Fusce ac nisl lorem. Pellentesque volutpat interdum odio, vitae pretium risus vulputate eget. Nam ultrices leo nec justo molestie, vel tempus mauris congue. Curabitur eget purus pharetra, condimentum magna a, suscipit ante.", date: "10/3/16")
+
+    var theNews: News!
     
     let id = "Cell"
-    
-    var Items: [News] = []
-    
+    var xmlParser: XMLParser!
+    var newsItems = [News]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        //refreshNews()
+        theNews = News(title: "Headline", date: "10-9-16", story: fuck)
         
-        
-        if let url = URL(string: "http://www.kusd.edu/xml-news"){
-            if let parser = XMLParser(contentsOf: url){
-                parser.delegate = self
-                parser.parse()
-            }
-        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,38 +36,122 @@ class NewsTableViewController: UITableViewController, XMLParserDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /** 
-    
-     Mark: - XMLParser Delegate Methods
-     
-    **/
-    
-    var newsTitle: String = ""
-    var newsDate: String = ""
-    var story: [String]?
-    var eName: String = ""
-    
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        
-        eName = elementName
-        
-        if elementName == "node"{
-            newsTitle = String()
-            newsDate = String()
-            story = []
-        }
-        
-    }
-    
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        
-        if elementName == "node" {
-            
-        
-        }
-        
-    }
+//    func refreshNews(){
+//        if let url = URL(string: "http://www.kusd.edu/xml-news"){
+//            
+//            xmlParser = XMLParser(contentsOf: url)
+//            xmlParser.delegate = self
+//            xmlParser.parse()
+//            
+//            
+//            
+//        }
+//    
+//    }
+//    
+//    
+//    /** 
+//    
+//     Mark: - XMLParser Delegate Methods
+//     
+//    **/
+//    
+//    var newsTitle: String!
+//    var newsDate: String!
+//    var story: [String]?
+//    var paragraph: String!
+//
+//    var currentParsedElement = String()
+//    var weAreInsideANode =  false
+//    var weAreInsideAStory = false
+//    
+//    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+//        
+//       
+//        
+//        if elementName == "node"{
+//            weAreInsideANode = true
+//        }
+//        else if elementName == "story" {
+//            weAreInsideAStory = true
+//        }
+//        
+//        if weAreInsideANode {
+//            switch elementName {
+//            case "title":
+//                newsTitle = String()
+//                currentParsedElement = "title"
+//            case "date":
+//                newsDate = String()
+//                currentParsedElement = "date"
+//            case "story":
+//                story = []
+//            default:
+//                break
+//            }
+//        }
+//        else if weAreInsideAStory {
+//            paragraph = String()
+//        }
+//
+//        
+//    }
+//    
+//    func parser(_ parser: XMLParser, foundCharacters string: String) {
+//        if weAreInsideANode {
+//            switch currentParsedElement {
+//            case "title":
+//                newsTitle = newsTitle + string
+//            case "date":
+//                newsDate = newsDate + string
+//            default:
+//                break
+//            }
+//        }
+//        
+//        if weAreInsideAStory{
+//            switch currentParsedElement {
+//            case "p":
+//                paragraph = paragraph + string
+//                story?.append(paragraph)
+//            default:
+//                break
+//            }
+//        }
+//    }
+//    
+//    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+//        
+//        if weAreInsideANode {
+//            switch elementName {
+//            case "title":
+//                currentParsedElement = ""
+//            case "date":
+//                currentParsedElement = ""
+//            case "story":
+//                currentParsedElement = ""
+//            default:
+//                break
+//            }
+//        }
+//        
+//        if elementName == "node" {
+//            var newsItem = News()
+//            newsItem.title = newsTitle
+//            print(newsTitle)
+//            newsItem.date = newsDate
+//            print(newsDate)
+//            
+//            newsItems.append(newsItem)
+//            weAreInsideANode = false
+//            weAreInsideAStory = false
+//        }
+//        
+//    }
+//    
+//    func parserDidEndDocument(_ parser: XMLParser) {
+//        self.tableView.reloadData()
+//    }
 
     // MARK: - Table view data source
 
@@ -89,9 +169,9 @@ class NewsTableViewController: UITableViewController, XMLParserDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: id, for: indexPath) as! NewsTableViewCell
         
-        cell.headline.text = "asdf"
-        cell.content.text = "asdf"
-        cell.date.text = "asdf"
+        cell.headline.text = theNews.title
+        cell.content.text = theNews.story!.stories[0]
+        cell.date.text = theNews.date
         
         return cell
     }
@@ -139,14 +219,16 @@ class NewsTableViewController: UITableViewController, XMLParserDelegate {
         let row = indexPath.row
         print("Selected item at \(row)")
         
-        performSegue(withIdentifier: "showNewsContent", sender: self)
+        performSegue(withIdentifier: "showNewsContent", sender: theNews)
     }
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  segue.identifier == "showNewsContent"{
-            _ = segue.destination as? NewsPageViewController
+            let destination = segue.destination as? NewsPageViewController
+            destination?.new = sender as! News
+            
         }
     }
  

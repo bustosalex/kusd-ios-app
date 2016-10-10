@@ -14,6 +14,7 @@
 		FA4BAD3B1D9C0A1D00B24F28 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4BAD3A1D9C0A1D00B24F28 /* CollectionViewCell.swift */; };
 		FA6FE3081DA2FDD2005A08A9 /* NewsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6FE3071DA2FDD2005A08A9 /* NewsPageViewController.swift */; };
 		FA6FE30B1DA3003E005A08A9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6FE30A1DA3003E005A08A9 /* News.swift */; };
+		FA7074A21DA9C5320031244D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7074A01DA9C5320031244D /* News.storyboard */; };
 		FAA3461D1D9B0608002D9F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3461C1D9B0608002D9F17 /* AppDelegate.swift */; };
 		FAA346221D9B0608002D9F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA346201D9B0608002D9F17 /* Main.storyboard */; };
 		FAA346271D9B0608002D9F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA346251D9B0608002D9F17 /* LaunchScreen.storyboard */; };
@@ -56,6 +57,7 @@
 		FA4BAD3A1D9C0A1D00B24F28 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FA6FE3071DA2FDD2005A08A9 /* NewsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsPageViewController.swift; sourceTree = "<group>"; };
 		FA6FE30A1DA3003E005A08A9 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		FA7074A11DA9C5320031244D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/News.storyboard; sourceTree = "<group>"; };
 		FAA346191D9B0608002D9F17 /* kusd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kusd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3461C1D9B0608002D9F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA346211D9B0608002D9F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				FA4BAD3D1D9C1D4E00B24F28 /* Views */,
 				FA4BAD3C1D9C1D2400B24F28 /* View Controllers */,
 				FAA346201D9B0608002D9F17 /* Main.storyboard */,
+				FA7074A01DA9C5320031244D /* News.storyboard */,
 				FAAA51691D9B36AC00606FFF /* Media.xcassets */,
 				FAA346251D9B0608002D9F17 /* LaunchScreen.storyboard */,
 				FAA346281D9B0608002D9F17 /* Info.plist */,
@@ -339,6 +342,7 @@
 				FAA346271D9B0608002D9F17 /* LaunchScreen.storyboard in Resources */,
 				FAAA516A1D9B36AC00606FFF /* Media.xcassets in Resources */,
 				FAA346221D9B0608002D9F17 /* Main.storyboard in Resources */,
+				FA7074A21DA9C5320031244D /* News.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +534,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FA7074A01DA9C5320031244D /* News.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA7074A11DA9C5320031244D /* Base */,
+			);
+			name = News.storyboard;
+			sourceTree = "<group>";
+		};
 		FAA346201D9B0608002D9F17 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
