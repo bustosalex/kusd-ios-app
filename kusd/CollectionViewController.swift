@@ -18,7 +18,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     // DataSource for Collection View
     // ---------------------------
-    private func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    internal func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
@@ -33,7 +33,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         return 9
     }
     
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.bounds.width - 10) / 3.1
         let height  = (collectionView.bounds.height - 10) / 3.1
@@ -47,12 +47,22 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     // Does something when that cell is clicked
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected iteam at: \(indexPath.row)")
+        print("Selected item \(iconName[indexPath.row])")
+        if iconName[indexPath.row] == "news" {
+            print("The correct button was selected \(indexPath.row)")
+            self.performSegue(withIdentifier: "showNews", sender: self)
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showNews"{
+            print("Trying to segue")
+            _ = segue.destination as! NewsTableViewController
+            print("Success")
+        }
     }
     
     
-
-    
-    
-
 }
+
