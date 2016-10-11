@@ -107,9 +107,6 @@
                             <constraint firstItem="3a2-Tt-6jd" firstAttribute="height" secondItem="YKz-yj-HWm" secondAttribute="height" id="r72-Xa-xv4"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="DTc-0P-W9B" kind="show" identifier="showCalendarScene" id="uYS-JL-yWm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaI-FA-PBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
