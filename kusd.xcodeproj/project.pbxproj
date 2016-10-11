@@ -24,6 +24,7 @@
 		FAAA516C1D9B5ADC00606FFF /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA516B1D9B5ADC00606FFF /* HomePageViewController.swift */; };
 		FAAA516E1D9B5BC600606FFF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA516D1D9B5BC600606FFF /* CollectionViewController.swift */; };
 		FABC5E751DA733E000864611 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABC5E741DA733E000864611 /* Story.swift */; };
+
 		FAE5E2ED1DAC783900859085 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5E2EC1DAC783900859085 /* NewsTableViewCell.swift */; };
 		FD0E53481DA3362300263888 /* PDFCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0E53471DA3362300263888 /* PDFCell.swift */; };
 		FD690D611DAAC9CF00A9C9D3 /* PDFButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD690D601DAAC9CF00A9C9D3 /* PDFButtonViewController.swift */; };
@@ -31,6 +32,7 @@
 		FDB1D4F11DA19C3D0009CFCC /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1D4F01DA19C3D0009CFCC /* EventCell.swift */; };
 		FDC371CA1DA95FB200938392 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC371C91DA95FB200938392 /* PDFViewController.swift */; };
 		FDC371CD1DA965B100938392 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC371CB1DA965B100938392 /* Calendar.storyboard */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,7 @@
 		FDB1D4F01DA19C3D0009CFCC /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		FDC371C91DA95FB200938392 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		FDC371CC1DA965B100938392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Calendar.storyboard; sourceTree = "<group>"; };
+
 		FE0BCEEA0CD850DAD74D398F /* Pods_kusdTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kusdTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -145,9 +148,11 @@
 			children = (
 				FAAA516D1D9B5BC600606FFF /* CollectionViewController.swift */,
 				FAAA516B1D9B5ADC00606FFF /* HomePageViewController.swift */,
+
 				FDB1D4E81DA17F820009CFCC /* EventTableViewController.swift */,
 				FD690D601DAAC9CF00A9C9D3 /* PDFButtonViewController.swift */,
 				FDC371C91DA95FB200938392 /* PDFViewController.swift */,
+
 				FA0B11251DA0771A00ACCE92 /* NewsTableViewController.swift */,
 				FA6FE3071DA2FDD2005A08A9 /* NewsPageViewController.swift */,
 			);
@@ -161,6 +166,7 @@
 				FA4BAD3A1D9C0A1D00B24F28 /* CollectionViewCell.swift */,
 				FDB1D4F01DA19C3D0009CFCC /* EventCell.swift */,
 				FD0E53471DA3362300263888 /* PDFCell.swift */,
+
 			);
 			name = Views;
 			sourceTree = "<group>";
