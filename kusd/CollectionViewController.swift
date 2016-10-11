@@ -18,7 +18,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     // DataSource for Collection View
     // ---------------------------
-    private func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    internal func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
@@ -33,7 +33,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         return iconName.count
     }
     
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.bounds.width - 10) / 3.1
         let height  = (collectionView.bounds.height - 10) / 3.1
@@ -47,15 +47,16 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     // Does something when that cell is clicked
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
         print("Selected item at: \(indexPath.row)")
 
     }
     
 
     
-    
+
 
     
     
-
 }
+
