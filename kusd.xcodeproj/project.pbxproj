@@ -24,7 +24,15 @@
 		FAAA516C1D9B5ADC00606FFF /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA516B1D9B5ADC00606FFF /* HomePageViewController.swift */; };
 		FAAA516E1D9B5BC600606FFF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA516D1D9B5BC600606FFF /* CollectionViewController.swift */; };
 		FABC5E751DA733E000864611 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABC5E741DA733E000864611 /* Story.swift */; };
-		FABD9C041DA332E300A2DADF /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD9C031DA332E300A2DADF /* NewsTableViewCell.swift */; };
+
+		FAE5E2ED1DAC783900859085 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5E2EC1DAC783900859085 /* NewsTableViewCell.swift */; };
+		FD0E53481DA3362300263888 /* PDFCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0E53471DA3362300263888 /* PDFCell.swift */; };
+		FD690D611DAAC9CF00A9C9D3 /* PDFButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD690D601DAAC9CF00A9C9D3 /* PDFButtonViewController.swift */; };
+		FDB1D4E91DA17F820009CFCC /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1D4E81DA17F820009CFCC /* EventTableViewController.swift */; };
+		FDB1D4F11DA19C3D0009CFCC /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1D4F01DA19C3D0009CFCC /* EventCell.swift */; };
+		FDC371CA1DA95FB200938392 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC371C91DA95FB200938392 /* PDFViewController.swift */; };
+		FDC371CD1DA965B100938392 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC371CB1DA965B100938392 /* Calendar.storyboard */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +81,14 @@
 		FAAA516B1D9B5ADC00606FFF /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		FAAA516D1D9B5BC600606FFF /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		FABC5E741DA733E000864611 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
-		FABD9C031DA332E300A2DADF /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		FAE5E2EC1DAC783900859085 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		FD0E53471DA3362300263888 /* PDFCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFCell.swift; sourceTree = "<group>"; };
+		FD690D601DAAC9CF00A9C9D3 /* PDFButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFButtonViewController.swift; sourceTree = "<group>"; };
+		FDB1D4E81DA17F820009CFCC /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		FDB1D4F01DA19C3D0009CFCC /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		FDC371C91DA95FB200938392 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		FDC371CC1DA965B100938392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Calendar.storyboard; sourceTree = "<group>"; };
+
 		FE0BCEEA0CD850DAD74D398F /* Pods_kusdTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kusdTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +148,11 @@
 			children = (
 				FAAA516D1D9B5BC600606FFF /* CollectionViewController.swift */,
 				FAAA516B1D9B5ADC00606FFF /* HomePageViewController.swift */,
+
+				FDB1D4E81DA17F820009CFCC /* EventTableViewController.swift */,
+				FD690D601DAAC9CF00A9C9D3 /* PDFButtonViewController.swift */,
+				FDC371C91DA95FB200938392 /* PDFViewController.swift */,
+
 				FA0B11251DA0771A00ACCE92 /* NewsTableViewController.swift */,
 				FA6FE3071DA2FDD2005A08A9 /* NewsPageViewController.swift */,
 			);
@@ -142,8 +162,11 @@
 		FA4BAD3D1D9C1D4E00B24F28 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FAE5E2EC1DAC783900859085 /* NewsTableViewCell.swift */,
 				FA4BAD3A1D9C0A1D00B24F28 /* CollectionViewCell.swift */,
-				FABD9C031DA332E300A2DADF /* NewsTableViewCell.swift */,
+				FDB1D4F01DA19C3D0009CFCC /* EventCell.swift */,
+				FD0E53471DA3362300263888 /* PDFCell.swift */,
+
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -195,6 +218,7 @@
 				FA4BAD3D1D9C1D4E00B24F28 /* Views */,
 				FA4BAD3C1D9C1D2400B24F28 /* View Controllers */,
 				FAA346201D9B0608002D9F17 /* Main.storyboard */,
+				FDC371CB1DA965B100938392 /* Calendar.storyboard */,
 				FA7074A01DA9C5320031244D /* News.storyboard */,
 				FAAA51691D9B36AC00606FFF /* Media.xcassets */,
 				FAA346251D9B0608002D9F17 /* LaunchScreen.storyboard */,
@@ -291,6 +315,7 @@
 		FAA346111D9B0607002D9F17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = uwp;
@@ -339,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC371CD1DA965B100938392 /* Calendar.storyboard in Resources */,
 				FAA346271D9B0608002D9F17 /* LaunchScreen.storyboard in Resources */,
 				FAAA516A1D9B36AC00606FFF /* Media.xcassets in Resources */,
 				FAA346221D9B0608002D9F17 /* Main.storyboard in Resources */,
@@ -490,13 +516,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC371CA1DA95FB200938392 /* PDFViewController.swift in Sources */,
+				FD690D611DAAC9CF00A9C9D3 /* PDFButtonViewController.swift in Sources */,
 				FAAA516E1D9B5BC600606FFF /* CollectionViewController.swift in Sources */,
+				FDB1D4F11DA19C3D0009CFCC /* EventCell.swift in Sources */,
+				FD0E53481DA3362300263888 /* PDFCell.swift in Sources */,
 				FA0B11261DA0771A00ACCE92 /* NewsTableViewController.swift in Sources */,
-				FABD9C041DA332E300A2DADF /* NewsTableViewCell.swift in Sources */,
 				FA6FE30B1DA3003E005A08A9 /* News.swift in Sources */,
 				FA6FE3081DA2FDD2005A08A9 /* NewsPageViewController.swift in Sources */,
+				FAE5E2ED1DAC783900859085 /* NewsTableViewCell.swift in Sources */,
 				FAAA516C1D9B5ADC00606FFF /* HomePageViewController.swift in Sources */,
 				FA4BAD3B1D9C0A1D00B24F28 /* CollectionViewCell.swift in Sources */,
+				FDB1D4E91DA17F820009CFCC /* EventTableViewController.swift in Sources */,
 				FAA3461D1D9B0608002D9F17 /* AppDelegate.swift in Sources */,
 				FABC5E751DA733E000864611 /* Story.swift in Sources */,
 			);
@@ -558,6 +589,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		FDC371CB1DA965B100938392 /* Calendar.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDC371CC1DA965B100938392 /* Base */,
+			);
+			name = Calendar.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -579,6 +618,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -628,6 +668,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -716,6 +757,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = kusdUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uwp.kusdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -730,6 +772,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = kusdUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uwp.kusdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
