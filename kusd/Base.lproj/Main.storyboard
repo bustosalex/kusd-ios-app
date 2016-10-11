@@ -133,8 +133,17 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="-548.27586206896558"/>
         </scene>
+        <!--kusdLunch-->
+        <scene sceneID="8ws-sz-ZNC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Lunch" referencedIdentifier="kusdLunch" id="ksO-CU-fcH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LyA-aT-NPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2527" y="-543"/>
+        </scene>
     </scenes>
     <resources>
         <image name="old_dude" width="605" height="275"/>
     </resources>
+    <color key="tintColor" red="0.019607843140000001" green="0.0" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>
