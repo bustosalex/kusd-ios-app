@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		C225A5E71DA9B244007CEEB8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225A5E61DA9B244007CEEB8 /* Extensions.swift */; };
+		C225A5E91DA9B254007CEEB8 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225A5E81DA9B254007CEEB8 /* CollapsibleTableViewHeader.swift */; };
+		C225A5EB1DA9B25A007CEEB8 /* CollapsibleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225A5EA1DA9B25A007CEEB8 /* CollapsibleTableViewController.swift */; };
+		C2CE038D1DA73609002581C4 /* LunchPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE038C1DA73609002581C4 /* LunchPDFViewController.swift */; };
+		C2E313CE1DAB38E200E9A91F /* Lunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E313CC1DAB38E200E9A91F /* Lunch.storyboard */; };
 		138EF591910EFD9D3EE799BC /* Pods_kusd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B6E33982561F84FAB6F0EB /* Pods_kusd.framework */; };
 		5CF0E8F33567778E953F73CA /* Pods_kusdUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD4F9750C297A9C7074304D /* Pods_kusdUITests.framework */; };
 		C94BAF23B85DDAFCE409D070 /* Pods_kusdTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0BCEEA0CD850DAD74D398F /* Pods_kusdTests.framework */; };
@@ -53,6 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C225A5E61DA9B244007CEEB8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C225A5E81DA9B254007CEEB8 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
+		C225A5EA1DA9B25A007CEEB8 /* CollapsibleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewController.swift; sourceTree = "<group>"; };
+		C2CE038C1DA73609002581C4 /* LunchPDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchPDFViewController.swift; sourceTree = "<group>"; };
+		C2E313CD1DAB38E200E9A91F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Lunch.storyboard; sourceTree = "<group>"; };
 		18566EFA9FEEEDBC1608FE1A /* Pods-kusdUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kusdUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kusdUITests/Pods-kusdUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D5F54ACE2D461632BCD6191 /* Pods-kusdTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kusdTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kusdTests/Pods-kusdTests.release.xcconfig"; sourceTree = "<group>"; };
 		3BD75F96855F29CE862F603E /* Pods-kusd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kusd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kusd/Pods-kusd.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,7 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				FAAA516D1D9B5BC600606FFF /* CollectionViewController.swift */,
+				C225A5E81DA9B254007CEEB8 /* CollapsibleTableViewHeader.swift */,
+				C225A5EA1DA9B25A007CEEB8 /* CollapsibleTableViewController.swift */,
 				FAAA516B1D9B5ADC00606FFF /* HomePageViewController.swift */,
+				C2CE038C1DA73609002581C4 /* LunchPDFViewController.swift */,
 
 				FDB1D4E81DA17F820009CFCC /* EventTableViewController.swift */,
 				FD690D601DAAC9CF00A9C9D3 /* PDFButtonViewController.swift */,
@@ -164,6 +178,7 @@
 			children = (
 				FAE5E2EC1DAC783900859085 /* NewsTableViewCell.swift */,
 				FA4BAD3A1D9C0A1D00B24F28 /* CollectionViewCell.swift */,
+				C225A5E61DA9B244007CEEB8 /* Extensions.swift */,
 				FDB1D4F01DA19C3D0009CFCC /* EventCell.swift */,
 				FD0E53471DA3362300263888 /* PDFCell.swift */,
 
@@ -218,6 +233,7 @@
 				FA4BAD3D1D9C1D4E00B24F28 /* Views */,
 				FA4BAD3C1D9C1D2400B24F28 /* View Controllers */,
 				FAA346201D9B0608002D9F17 /* Main.storyboard */,
+				C2E313CC1DAB38E200E9A91F /* Lunch.storyboard */,
 				FDC371CB1DA965B100938392 /* Calendar.storyboard */,
 				FA7074A01DA9C5320031244D /* News.storyboard */,
 				FAAA51691D9B36AC00606FFF /* Media.xcassets */,
@@ -366,6 +382,7 @@
 			files = (
 				FDC371CD1DA965B100938392 /* Calendar.storyboard in Resources */,
 				FAA346271D9B0608002D9F17 /* LaunchScreen.storyboard in Resources */,
+				C2E313CE1DAB38E200E9A91F /* Lunch.storyboard in Resources */,
 				FAAA516A1D9B36AC00606FFF /* Media.xcassets in Resources */,
 				FAA346221D9B0608002D9F17 /* Main.storyboard in Resources */,
 				FA7074A21DA9C5320031244D /* News.storyboard in Resources */,
@@ -516,6 +533,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C225A5EB1DA9B25A007CEEB8 /* CollapsibleTableViewController.swift in Sources */,
+				C225A5E71DA9B244007CEEB8 /* Extensions.swift in Sources */,
+				FAAA516E1D9B5BC600606FFF /* CollectionViewController.swift in Sources */,
+				C2CE038D1DA73609002581C4 /* LunchPDFViewController.swift in Sources */,
+				C225A5E91DA9B254007CEEB8 /* CollapsibleTableViewHeader.swift in Sources */,
 				FDC371CA1DA95FB200938392 /* PDFViewController.swift in Sources */,
 				FD690D611DAAC9CF00A9C9D3 /* PDFButtonViewController.swift in Sources */,
 				FAAA516E1D9B5BC600606FFF /* CollectionViewController.swift in Sources */,
@@ -565,6 +587,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C2E313CC1DAB38E200E9A91F /* Lunch.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2E313CD1DAB38E200E9A91F /* Base */,
+			);
+			name = Lunch.storyboard;
 		FA7074A01DA9C5320031244D /* News.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

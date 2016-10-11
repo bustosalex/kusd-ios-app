@@ -45,8 +45,15 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     // ---------------------------
     
     // Does something when that cell is clicked
+   
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+<<<<<<< HEAD
+        print("Selected item \(iconName[indexPath.row])")
+
+        
+    }
+=======
 
 
         print("Selected item at: \(indexPath.row)")
@@ -58,6 +65,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
 
 
 
+>>>>>>> dev
     
     
 }
