@@ -98,9 +98,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="s6c-hU-qb6" kind="show" identifier="showNews" id="0IB-g9-2B2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaI-FA-PBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

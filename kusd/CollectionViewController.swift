@@ -48,20 +48,10 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selected item \(iconName[indexPath.row])")
-        if iconName[indexPath.row] == "news" {
-            print("The correct button was selected \(indexPath.row)")
-            self.performSegue(withIdentifier: "showNews", sender: self)
-        }
+
         
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showNews"{
-            print("Trying to segue")
-            _ = segue.destination as! NewsTableViewController
-            print("Success")
-        }
-    }
+
     
     
 }
