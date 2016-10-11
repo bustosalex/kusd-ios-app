@@ -48,24 +48,12 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-<<<<<<< HEAD
+
         print("Selected item \(iconName[indexPath.row])")
 
         
     }
-=======
 
-
-        print("Selected item at: \(indexPath.row)")
-
-    }
-    
-
-    
-
-
-
->>>>>>> dev
     
     
 }
